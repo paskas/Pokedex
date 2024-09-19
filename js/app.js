@@ -1,12 +1,12 @@
 let pokemon = [];
 let offsetPokemon = 20;
-let limitPokemon = 151;
+let limitPokemon = 152;
 
 
 async function init() {
     loadingSpinner();
-    await fetchPokemon()
-    renderPokemonInfoCard()
+    await fetchPokemon();
+    renderPokemonInfoCard();
 }
 
 

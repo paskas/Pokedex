@@ -1,6 +1,5 @@
 function createHtmlPokemonInfoCard(pokemonData, i) {
     return `
-    <ul class="pokemon-info-card">
         <li class="pokemon-card-outside">
             <div class="pokemon-card-inside">
                 <div class="card-titel">
@@ -16,6 +15,5 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
                     </div>
                 </div>
             </div>
-        </li>
-    </ul>`;
+        </li>`;
 }

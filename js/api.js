@@ -1,14 +1,32 @@
 const BASE_URL = "https://pokeapi.co/api/v2/";
-const FULL_POKE_URL = "https://pokeapi.co/api/v2/pokemon?limit=252&offset=152";
+const FULL_POKE_URL = "https://pokeapi.co/api/v2/pokemon?limit=1302&offset=0";
 
 
-async function fetchPokemons(path = `pokemon/ampharos`) {
+async function fetchPokemon(path = `pokemon?limit=${offsetPokemon}&offset=${limitPokemon}`) {
     try {
         let response = await fetch(BASE_URL + path);
         let responseAsJson = await response.json();
-        pokemons = responseAsJson;
+        let pokemonList = responseAsJson.results;
+        await pushPokemonToArray(pokemonList);
     } catch (error) {
-        console.error(error, "konnte nicht geladen werden!");
+        console.error(error, "could not be loaded!");
     }
-    console.log(pokemons);
+}
+
+
+async function pushPokemonToArray(pokemonList) {
+    for (let i = 0; i < pokemonList.length; i++) {
+        let pokemonDetails = await fetchPokemonDetails(pokemonList[i].url);
+        pokemon.push(pokemonDetails);
+    }
+}
+
+
+async function fetchPokemonDetails(url) {
+    try {
+        let response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.error(error, "Details could not be loaded!");
+    }
 }

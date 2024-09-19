@@ -1,14 +1,19 @@
-let offsetPokemons = [];
-let pokemons = [];
+let pokemon = [];
+let offsetPokemon = 20;
+let limitPokemon = 151;
+
 
 async function init() {
-    fetchPokemons()
+    await fetchPokemon()
+    renderPokemonInfoCard()
 }
+
 
 function renderPokemonInfoCard() {
     let infoCard = document.getElementById('pokemon_info_card');
     infoCard.innerHTML = "";
-    for (let i = 0; i < offsetPokemons.length; i++) {
-        infoCard.innerHTML += createHtmlPokemonInfoCard();
+    for (let i = 0; i < pokemon.length; i++) {
+        infoCard.innerHTML += createHtmlPokemonInfoCard(pokemon[i], i);
     }
+    console.log(pokemon);
 }

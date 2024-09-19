@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/standard.css">
     <link rel="stylesheet" href="./style/pokeCard.css">
+    <link rel="stylesheet" href="./style/loadingSpinner.css">
 </head>
 
 <body onload="init()">
@@ -27,6 +28,10 @@
     </header>
 
     <main>
+        <div class="loading-spinner d-none">
+            <div class="loading-spinner-content b-box">
+            </div>
+        </div>
         <section class="pokemon-card-section">
             <ul id="pokemon_info_card" class="pokemon-info-card"></ul>
         </section>

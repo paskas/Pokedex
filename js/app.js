@@ -4,6 +4,7 @@ let limitPokemon = 151;
 
 
 async function init() {
+    loadingSpinner();
     await fetchPokemon()
     renderPokemonInfoCard()
 }

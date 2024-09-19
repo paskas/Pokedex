@@ -10,6 +10,10 @@ ul {
     list-style: none;
 }
 
-.d-none{
-    display: none;
+.d-none {
+    display: none !important;
+}
+
+.b-box {
+    box-sizing: content-box;
 }

@@ -1,6 +1,7 @@
 function createHtmlPokemonInfoCard(pokemonData, i) {
+    let { type1, type2 } = getPokemonTypeNames(pokemonData); // Typen abfragen
     return `
-        <li class="pokemon-card-outside">
+        <li id="ds" class="pokemon-card-outside">
             <div class="pokemon-card-inside">
                 <div class="card-titel">
                     <h2>${capitalizeFirstLetter(pokemonData.name)}</h2>
@@ -10,8 +11,8 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
                     <div class="card-id"><span>Nr.${pokemonData.id.toString().padStart(4, '0')}</span></div>
                     <hr>
                     <div class="card-types">
-                        <div>Pflanze</div>
-                        <div>Gift</div>
+                        <div> class="${type1}"</div>
+                        <div> class="${type2}"<</div>
                     </div>
                 </div>
             </div>

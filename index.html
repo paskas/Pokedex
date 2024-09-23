@@ -8,6 +8,8 @@
     <link rel="icon" type="favicon" href="">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="style/colorTypes.css">
+    <link rel="stylesheet" href="./style/assets.css">
     <link rel="stylesheet" href="./style/pokeCard.css">
     <link rel="stylesheet" href="./style/loadingSpinner.css">
 </head>
@@ -27,15 +29,17 @@
         </div>
     </header>
     <main>
-        <div class="loading-spinner d-none">
-            <div class="loading-spinner-content b-box">
-            </div>
+        <div id="loading_spinner" class="loading-spinner d-none">
+            <div class="loading-spinner-content b-box"></div>
+            <div class="loading-spinner-text"><span>loading...</span></div>
         </div>
         <section class="pokemon-card-section">
             <ul id="pokemon_info_card" class="pokemon-info-card"></ul>
+            <div class="load-more-container">
+                <button class="btn-load-more">Mehr Pokemon laden</button>
+            </div>
         </section>
     </main>
-
     <footer></footer>
     <script src="./js/app.js"></script>
     <script src="./js/api.js"></script>

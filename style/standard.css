@@ -10,6 +10,10 @@ ul {
     list-style: none;
 }
 
+button{
+    text-decoration: none;
+}
+
 .d-none {
     display: none !important;
 }

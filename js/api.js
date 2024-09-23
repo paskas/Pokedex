@@ -15,9 +15,13 @@ async function fetchPokemon(path = `pokemon?limit=${offsetPokemon}&offset=${limi
 
 
 async function pushPokemonToArray(pokemonList) {
-    for (let i = 0; i < pokemonList.length; i++) {
-        let pokemonDetails = await fetchPokemonDetails(pokemonList[i].url);
-        pokemon.push(pokemonDetails);
+    try {
+        for (let i = 0; i < pokemonList.length; i++) {
+            let pokemonDetails = await fetchPokemonDetails(pokemonList[i].url);
+            pokemon.push(pokemonDetails);
+        }
+    } catch (error) {
+        console.error(error, "could not be pushed!");
     }
 }
 

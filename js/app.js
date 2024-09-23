@@ -24,15 +24,15 @@ function renderPokemonInfoCard() {
 
 
 function extractPokemonTypes() {
-    pokemonTypes = []; // Leeren, um sicherzustellen, dass es keine alten Daten gibt
+    pokemonTypes = []; 
     for (let i = 0; i < pokemon.length; i++) {
         let { type1, type2 } = getPokemonTypeNames(pokemon[i]);
-        pokemonTypes.push({ type1, type2 }); // Speichern der Typen in pokemonTypes
+        pokemonTypes.push({ type1, type2 });
     }
     console.log(pokemonTypes);
 }
 
-// Funktion, um die Typen eines einzelnen Pokémon abzurufen
+
 function getPokemonTypeNames(pokemon) {
     let type1 = pokemon.types[0]?.type.name || "";
     let type2 = pokemon.types[1]?.type.name || "";

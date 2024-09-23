@@ -1,0 +1,175 @@
+/* Pokemon coler code / logo */
+.bg-logo-yellow {
+    background-color: #ffcc00;
+}
+
+.bg-logo-curious-blue {
+    background-color: #3d7dca;
+}
+
+.bg-logo-prussian-blue {
+    background-color: #003153;
+}
+
+/* Pokemon color types */
+.bg-grass {
+    background-color: #7AC74C;
+    box-shadow: 0 0 20px #7AC74C;
+    background-image: url(../assets/iconTypes/grass.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-fire {
+    background-color: #f04c1a;
+    box-shadow: 0 0 20px #f04c1a;
+    background-image: url(../assets/iconTypes/fire.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-poison {
+    background-color: #A33EA1;
+    box-shadow: 0 0 20px #A33EA1;
+    background-image: url(../assets/iconTypes/poison.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-water {
+    background-color: #6390F0;
+    box-shadow: 0 0 20px #6390F0;
+    background-image: url(../assets/iconTypes/water.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-bug {
+    background-color: #A6B91A;
+    box-shadow: 0 0 20px #A6B91A;
+    background-image: url(../assets/iconTypes/bug.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-flying {
+    background-color: #A98FF3;
+    box-shadow: 0 0 20px #A98FF3;
+    background-image: url(../assets/iconTypes/flying.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-normal {
+    background-color: #A8A77A;
+    box-shadow: 0 0 20px #A8A77A;
+    background-image: url(../assets/iconTypes/normal.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-electric {
+    background-color: #F7D02C;
+    box-shadow: 0 0 20px #F7D02C;
+    background-image: url(../assets/iconTypes/electric.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-ground {
+    background-color: #E2BF65;
+    box-shadow: 0 0 20px #E2BF65;
+    background-image: url(../assets/iconTypes/ground.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-fairy {
+    background-color: #D685AD;
+    box-shadow: 0 0 20px #D685AD;
+    background-image: url(../assets/iconTypes/fairy.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-fighting {
+    background-color: #b32b26cc;
+    box-shadow: 0 0 20px #b32b26cc;
+    background-image: url(../assets/iconTypes/fighting.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-psychic {
+    background-color: #F95587;
+    box-shadow: 0 0 20px #F95587;
+    background-image: url(../assets/iconTypes/psychic.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-rock {
+    background-color: #B6A136;
+    box-shadow: 0 0 20px #B6A136;
+    background-image: url(../assets/iconTypes/rock.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-steel {
+    background-color: #B7B7CE;
+    box-shadow: 0 0 20px #B7B7CE;
+    background-image: url(../assets/iconTypes/steel.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-ice {
+    background-color: rgb(0, 204, 255);
+    box-shadow: 0 0 20px rgb(0, 204, 255);
+    background-image: url(../assets/iconTypes/ice.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-ghost {
+    background-color: #735797;
+    box-shadow: 0 0 20px #735797;
+    background-image: url(../assets/iconTypes/ghost.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-dragon {
+    background-color: #6F35FC;
+    box-shadow: 0 0 20px #6F35FC;
+    background-image: url(../assets/iconTypes/dragon.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-dark {
+    background-color: #70574670;
+    box-shadow: 0 0 20px #70574670;
+    background-image: url(../assets/iconTypes/dark.svg);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

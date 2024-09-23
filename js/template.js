@@ -11,8 +11,8 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
                     <div class="card-id"><span>Nr.${pokemonData.id.toString().padStart(4, '0')}</span></div>
                     <hr>
                     <div class="card-types">
-                        <div> class="${type1}"</div>
-                        <div> class="${type2}"<</div>
+                        <div class="bg-${type1}"></div>
+                        <div class="bg-${type2}"></div>
                     </div>
                 </div>
             </div>

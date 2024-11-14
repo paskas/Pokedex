@@ -10,7 +10,7 @@ ul {
     list-style: none;
 }
 
-button{
+button {
     text-decoration: none;
 }
 
@@ -20,4 +20,8 @@ button{
 
 .b-box {
     box-sizing: content-box;
+}
+
+.c-white {
+    color: white;
 }

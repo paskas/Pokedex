@@ -1,6 +1,6 @@
 .pokemon-info-card {
     max-width: 1920px;
-    margin: 24px auto;
+    margin: 16px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +24,7 @@
 }
 
 .pokemon-card-inside {
-    background: linear-gradient(135deg, rgb(99, 180, 206) 0%, rgb(255, 255, 255) 100%);
     text-align: center;
-    border-radius: 12px;
     padding: 16px;
     box-shadow: inset 0px 0px 60px -8px #252523;
     position: relative;
@@ -41,14 +39,16 @@
 }
 
 .card-titel h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: black;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card-img {
-    width: 250px;
-    height: 250px;
+    background-image: url(../assets/img/body_bg.png);
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     margin-top: 8px;
     border: 4px solid rgb(210, 190, 82);
     cursor: pointer;
@@ -73,22 +73,38 @@
     margin: 8px;
 }
 
-.card-id span{
+.card-id span {
     font-size: 1.2rem;
     color: black;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-types-container {
+    background-image: url(../assets/img/body_bg.png);
+    max-width: 250px;
+    height: auto;
+    margin-top: 16px;
+    border: 4px solid rgb(210, 190, 82);
 }
 
 .card-types {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 16px 8px 8px 8px;
+    padding: 8px
 }
 
-.card-types div {
+.type {
     border-radius: 100%;
     height: 60px;
     width: 60px;
     margin: auto;
+}
+
+
+
+@media (max-width: 375px) {
+    .pokemon-card-outside {
+        margin: 0 16px;
+    }
 }

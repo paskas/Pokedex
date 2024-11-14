@@ -10,10 +10,6 @@ body {
     background-color: white;
 }
 
-main {
-    flex: 1;
-}
-
 /* header */
 header {
     background-color: rgb(47, 47, 47)
@@ -22,22 +18,20 @@ header {
 .header {
     max-width: 1920px;
     margin: 0 auto;
-    height: 80px;
+    height: 96px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.header-left {}
-
 .header-left img {
-    height: 64px;
+    height: 72px;
 }
 
 .search-container {}
 
 .search-form {
-    width: 100%;
+    width: 288px;
     display: flex;
     align-items: center;
 }
@@ -63,4 +57,20 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .header-left {
+        margin-top: 8px;
+    }
+
+    .search-form {
+        margin: 8px;
+    }
 }

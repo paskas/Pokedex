@@ -1,7 +1,10 @@
 let offsetPokemon = 30;
-let limitPokemon = 152;
+let limitPokemon = 0;
+let allPokemon = 1302;
+let quantityPerLoad = 100;
 let pokemon = [];
 let pokemonTypes = [];
+
 
 async function init() {
     showLoadingSpinner();
@@ -9,27 +12,27 @@ async function init() {
     extractPokemonTypes();
     renderPokemonInfoCard();
     hideLoadingSpinner();
-
 }
 
 
 function renderPokemonInfoCard() {
     let infoCard = document.getElementById('pokemon_info_card');
     infoCard.innerHTML = "";
+    let cardContent = "";
     for (let i = 0; i < pokemon.length; i++) {
-        infoCard.innerHTML += createHtmlPokemonInfoCard(pokemon[i], i);
+        cardContent += createHtmlPokemonInfoCard(pokemon[i], i);
     }
+    infoCard.innerHTML += cardContent;
     console.log(pokemon);
 }
 
 
 function extractPokemonTypes() {
-    pokemonTypes = []; 
+    pokemonTypes = [];
     for (let i = 0; i < pokemon.length; i++) {
         let { type1, type2 } = getPokemonTypeNames(pokemon[i]);
         pokemonTypes.push({ type1, type2 });
     }
-    console.log(pokemonTypes);
 }
 
 
@@ -38,3 +41,5 @@ function getPokemonTypeNames(pokemon) {
     let type2 = pokemon.types[1]?.type.name || "";
     return { type1, type2 };
 }
+
+

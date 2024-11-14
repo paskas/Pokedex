@@ -42,4 +42,7 @@ function getPokemonTypeNames(pokemon) {
     return { type1, type2 };
 }
 
+function renderPokemonInfoOverlay(){
+    
+}
 

@@ -21,3 +21,7 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
         </div>
     </li>`;
 }
+
+function createHtmlPokemonInfoOverlay(){
+
+}

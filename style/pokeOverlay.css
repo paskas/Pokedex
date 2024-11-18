@@ -33,13 +33,14 @@
 }
 
 .top-inside-overlay {
+    background-image: url(../assets/img/body_bg.png);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     height: 50%;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,52 +67,81 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background-image: url(../assets/img/pokeball_image.png);
-    background-position: center;
-    background-size: 30%;
-    background-repeat: no-repeat;
     width: 100%;
     max-width: 250px;
     height: auto;
 }
 
+.dialog-image img {
+    height: auto;
+    width: 100%;
+}
+
 .dialog-info {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    left: 24px;
+    bottom: 48px;
     height: auto;
+}
+
+.dialog-pokeinfo {
+    text-align: left;
+    padding-left: 16px;
+}
+
+.dialog-pokeinfo th {
+    padding-right: 16px;
+}
+
+.dialog-type{
     display: flex;
-    align-items: flex-start;
+    gap: 16px;
+    align-items: center;
+}
+
+.dialog-type span {
+    display: flex;
+    align-items: center;
     flex-direction: column;
-}
-
-.dialog-pokeinfo {}
-
-.dialog-pokeinfo table {}
-
-.dialog-type {
-    display: flex;
-    align-items: center;
-}
-
-.dialog-resi {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.type-resi {
-    border-radius: 12px;
-    height: 60px;
     width: 100px;
+    border: 2px solid white;
+    border-radius: 8px;
 }
 
+.dialog-stats {
+    text-align: left;
+    padding-right: 16px;
+}
+
+.dialog-stats th {
+    padding-right: 16px;
+}
 
 .bottom-inside-overlay {
-    background-image: url(../assets/img/body_bg.png);
-    background-color: white;
+    position: absolute;
     height: 50%;
+    width: 100%;
+    bottom: 0;
+}
+
+.dialog-poke-stats-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 22px;
+}
+
+.dialog-poke-stats-container th, .dialog-poke-stats-container td {
+    width: 100%;
+    word-wrap: break-word; 
+}
+
+
+.dialog-poke-stats-container tr {
+    display: flex;
+    flex-direction: column;
 }
 
 

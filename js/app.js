@@ -23,7 +23,6 @@ function renderPokemonInfoCard() {
         cardContent += createHtmlPokemonInfoCard(pokemon[i], i);
     }
     infoCard.innerHTML += cardContent;
-    console.log(pokemon);
 }
 
 
@@ -48,6 +47,7 @@ function openPokemonOverlay(pokemonId) {
     const overlayContainer = document.getElementById('pokemon_info_overlay');
     overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData);
     overlayContainer.classList.remove('d-none');
+    document.body.style.overflow = 'hidden';
 }
 
 
@@ -56,5 +56,6 @@ function closeOverlay(event) {
     const overlayContainer = document.getElementById('pokemon_info_overlay');
     overlayContainer.classList.add('d-none');
     overlayContainer.innerHTML = '';
+    document.body.style.overflow = '';
 }
 

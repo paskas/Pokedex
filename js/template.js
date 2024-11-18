@@ -6,8 +6,8 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
             <div class="card-titel">
                 <h2>${insertLineBreaks(capitalizeFirstLetter(pokemonData.name))}</h2>
             </div>
-            <a href="#"><img src="${pokemon[i].sprites.other.home.front_default}" alt="${pokemonData.name}"
-                    class="card-img"></a>
+            <img src="${pokemon[i].sprites.other.home.front_default}" alt="${pokemonData.name}"
+                    class="card-img" onclick="openPokemonOverlay(${pokemonData.id})">
             <div class="card-infos">
                 <div class="card-id"><span>Nr. ${pokemonData.id.toString().padStart(4, '0')}</span></div>
                 <hr>
@@ -22,6 +22,55 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
     </li>`;
 }
 
-function createHtmlPokemonInfoOverlay(){
-
+function createHtmlPokemonInfoOverlay(pokemonData) {
+    return `
+            <div class="outside-overlay-container">
+                <div class="inside-overlay-container" onclick="event.stopPropagation()">
+                    <div class="top-inside-overlay">
+                        <div class="top-inside">
+                            <div class="dialog-title-container">
+                                <h2 class="c-white">${pokemonData.name}</h2>
+                                <span class="c-white">Nr. ${pokemonData.id}</span>
+                            </div>
+                            <div class="dialog-info-container">
+                                <div class="dialog-info">
+                                    <div class="dialog-pokeinfo c-white">
+                                        <table>
+                                            <tr>
+                                                <th>Größe</th>
+                                                <td>${(pokemonData.height / 10).toFixed(1)} m</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Gewicht</th>
+                                                <td>${(pokemonData.weight / 10).toFixed(1)} kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Geschlecht</th>
+                                                <td>männlich/weiblich</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="dialog-type c-white">
+                                        ${pokemonData.types.map(type => `<span class="type-resi bg-${type.type.name}">${type.type.name}</span>`).join('')}
+                                    </div>
+                                    <div class="dialog-resi c-white">
+                                        <span class="type-resi bg-weakness1">weakness1</span>
+                                        <span class="type-resi bg-weakness2">weakness2</span>
+                                    </div>
+                                </div>
+                                <div class="dialog-image">
+                                    <img src="${pokemonData.sprites.other.home.front_default}" alt="${pokemonData.name}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-inside-overlay">
+                        <div class="dialog-poke-stats-container"></div>
+                        <div class="dialog-evo-container"></div>
+                        <div class="dialog-next-arrows"></div>
+                    </div>
+                    <button class="close-overlay-btn" onclick="closeOverlay(event)">X</button>
+                </div>
+            </div>
+    `;
 }

@@ -42,7 +42,19 @@ function getPokemonTypeNames(pokemon) {
     return { type1, type2 };
 }
 
-function renderPokemonInfoOverlay(){
-    
+
+function openPokemonOverlay(pokemonId) {
+    const pokemonData = pokemon.find(p => p.id === pokemonId); // Überprüfen, ob Daten existieren
+    const overlayContainer = document.getElementById('pokemon_info_overlay');
+    overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData);
+    overlayContainer.classList.remove('d-none');
+}
+
+
+function closeOverlay(event) {
+    event.stopPropagation();
+    const overlayContainer = document.getElementById('pokemon_info_overlay');
+    overlayContainer.classList.add('d-none');
+    overlayContainer.innerHTML = '';
 }
 

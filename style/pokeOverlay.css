@@ -64,17 +64,20 @@
 }
 
 .dialog-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 0;
-    bottom: 0;
-    width: 100%;
+    bottom: 50px;
+    width: 50%;
     max-width: 250px;
     height: auto;
 }
 
 .dialog-image img {
+    width: 50%;
     height: auto;
-    width: 100%;
 }
 
 .dialog-info {

@@ -1,4 +1,4 @@
-function createHtmlPokemonInfoCard(pokemonData, i) {
+function createHtmlPokemonInfoCard(pokemonData) {
     let { type1, type2 } = getPokemonTypeNames(pokemonData);
     return `
     <li id="ds" class="pokemon-card-outside">
@@ -6,7 +6,7 @@ function createHtmlPokemonInfoCard(pokemonData, i) {
             <div class="card-titel">
                 <h2>${insertLineBreaks(capitalizeFirstLetter(pokemonData.name))}</h2>
             </div>
-            <img src="${pokemon[i].sprites.other['official-artwork'].front_default}" alt="${pokemonData.name}"
+            <img src="${pokemonData.sprites.other['official-artwork'].front_default}" alt="${pokemonData.name}"
                     class="card-img" onclick="openPokemonOverlay(${pokemonData.id})">
             <div class="card-infos">
                 <div class="card-id"><span>Nr. ${pokemonData.id.toString().padStart(4, '0')}</span></div>

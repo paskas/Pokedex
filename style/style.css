@@ -28,12 +28,23 @@ header {
     height: 72px;
 }
 
-.search-container {}
+.search-container {
+    display: flex;
+    flex-direction: column;
+}
 
 .search-form {
     width: 288px;
     display: flex;
     align-items: center;
+}
+
+.warning-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 70px;
+    display: none;
 }
 
 /* main section */
@@ -59,11 +70,11 @@ footer {
     align-items: center;
 }
 
-
 @media (max-width: 768px) {
     .header {
         height: fit-content;
         flex-direction: column;
+        height: 120px;
     }
 
     .header-left {
@@ -72,5 +83,14 @@ footer {
 
     .search-form {
         margin: 8px;
+    }
+
+    .search-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .warning-message {
+        top: 130px;
     }
 }

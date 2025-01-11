@@ -10,6 +10,7 @@ async function init() {
     showLoadingSpinner();
     await fetchPokemon();
     extractPokemonTypes();
+    prepareAllPokemonNames(); // Alle Namen vorbereiten
     renderPokemonInfoCard();
     hideLoadingSpinner();
 }
@@ -57,5 +58,50 @@ function closeOverlay(event) {
     overlayContainer.classList.add('d-none');
     overlayContainer.innerHTML = '';
     document.body.style.overflow = '';
+}
+
+
+function prepareAllPokemonNames() {
+    allNames = pokemon.map(p => p.name.toLowerCase());
+}
+
+
+function searchPokemon(inputEvent) {
+    const query = inputEvent.target.value.toLowerCase().trim(); // Normalisiere die Eingabe
+    const minLength = 3;
+
+    if (query.length >= minLength) {
+        const filteredPokemon = pokemon.filter(p => p.name.toLowerCase().includes(query));
+        renderFilteredPokemon(filteredPokemon);
+        hideMinLengthWarning(); // Warnung ausblenden, wenn 3 oder mehr Buchstaben eingegeben wurden
+    } else if (query.length === 0) {
+        renderPokemonInfoCard(); // Zeige alle Pokémon, wenn das Feld leer ist
+        hideMinLengthWarning();
+    } else {
+        showMinLengthWarning(); // Zeige Warnung, wenn weniger als 3 Buchstaben eingegeben wurden
+    }
+}
+
+
+function showMinLengthWarning() {
+    const warningMessage = document.getElementById("warning-message");
+    warningMessage.style.display = "block"; // Zeige die Warnung an
+}
+
+
+function hideMinLengthWarning() {
+    const warningMessage = document.getElementById("warning-message");
+    warningMessage.style.display = "none"; // Verstecke die Warnung
+}
+
+
+function renderFilteredPokemon(filteredPokemon) {
+    let infoCard = document.getElementById('pokemon_info_card');
+    infoCard.innerHTML = "";
+    let cardContent = "";
+    for (let i = 0; i < filteredPokemon.length; i++) {
+        cardContent += createHtmlPokemonInfoCard(filteredPokemon[i], i);
+    }
+    infoCard.innerHTML += cardContent;
 }
 

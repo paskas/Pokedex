@@ -28,7 +28,6 @@ async function pushPokemonToArray(pokemonList) {
     }
 }
 
-
 // überprüft ob das Pokemon bereits im Array vorhanden ist
 function pokemonAlreadyExists(pokemonId) {
     for (let j = 0; j < pokemon.length; j++) {
@@ -72,6 +71,7 @@ async function loadAllPokemon() {
     renderPokemonInfoCard(); // render Pokemon erst nach vollständigem Laden
     hideLoadingSpinner();
 }
+
 
 function createFetchPromises() {
     let promises = [];

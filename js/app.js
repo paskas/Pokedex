@@ -44,9 +44,11 @@ function getPokemonTypeNames(pokemon) {
 
 
 function openPokemonOverlay(pokemonId) {
-    const pokemonData = pokemon.find(p => p.id === pokemonId); // Überprüfen, ob Daten existieren
+    const pokemonData = pokemon.find(p => p.id === pokemonId); // Finde das aktuelle Pokémon
+    const index = pokemon.findIndex(p => p.id === pokemonId); // Finde den Index des aktuellen Pokémon
     const overlayContainer = document.getElementById('pokemon_info_overlay');
-    overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData);
+    if (!pokemonData) return; // Falls kein Pokémon gefunden wird, abbrechen
+    overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData, index);
     overlayContainer.classList.remove('d-none');
     document.body.style.overflow = 'hidden';
 }
@@ -58,11 +60,6 @@ function closeOverlay(event) {
     overlayContainer.classList.add('d-none');
     overlayContainer.innerHTML = '';
     document.body.style.overflow = '';
-}
-
-
-function prepareAllPokemonNames() {
-    allNames = pokemon.map(p => p.name.toLowerCase());
 }
 
 

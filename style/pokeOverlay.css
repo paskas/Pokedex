@@ -27,14 +27,12 @@
 
 .inside-overlay-container {
     height: auto;
-    width: 50vw;
+    width: 100%;
     box-shadow: inset 0px 0px 60px -8px #252523;
     position: relative;
 }
 
 .top-inside-overlay {
-    background-image: url(../assets/img/body_bg.png);
-    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     height: 50%;
     width: 100%;
@@ -121,6 +119,7 @@
 }
 
 .bottom-inside-overlay {
+    background-image: url(../assets/img/body_bg.png);
     position: absolute;
     height: 50%;
     width: 100%;
@@ -128,12 +127,10 @@
 }
 
 .dialog-poke-stats-container {
-    width: 100%;
     border-collapse: collapse;
     margin-top: 16px;
     display: flex;
     justify-content: space-evenly;
-    gap: 22px;
 }
 
 .dialog-poke-stats-container th, .dialog-poke-stats-container td {
@@ -160,4 +157,59 @@
     height: 30px;
     font-size: 18px;
     cursor: pointer;
+}
+
+.dialog-next-arrows{
+
+}
+
+.nav-arrow{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-arrow.left{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-arrow.right{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 1261px) {
+    .outside-overlay-container{
+        max-width: 60vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1025px){
+    .outside-overlay-container{
+        max-width: 70vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 721px){
+    .outside-overlay-container{
+        max-width: 80vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 481px){
+    .outside-overlay-container{
+        max-width: 90vw;
+        width: 100%;
+    }
 }

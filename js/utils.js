@@ -32,28 +32,7 @@ function sortPokemonArray() {
 }
 
 
-function comparePokemonById(pokemonA, pokemonB) {
-    if (pokemonA.id < pokemonB.id) {
-        return -1; // pokemon A kommt vor pokemon B
-    } else if (pokemonA.id > pokemonB.id) {
-        return 1; // pokemon B kommt vor pokemon A
-    } else {
-        return 0; // Beide sind gleich
-    }
-}
-
-
 function prepareAllPokemonNames() {
     allNames = pokemon.map(p => p.name.toLowerCase());
 }
 
-
-function navigateFullscreen(index) {
-    if (index < 0) {
-        index = pokemon.length - 1; // Zum letzten Pokémon springen
-    }
-    if (index >= pokemon.length) {
-        index = 0; // Zum ersten Pokémon springen
-    }
-    openPokemonOverlay(pokemon[index].id); // Öffne das Overlay für das neue Pokémon
-}

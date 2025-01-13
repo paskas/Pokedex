@@ -86,3 +86,14 @@ function createFetchPromises() {
     return promises; // Gib die Liste der Promises zurück
 }
 
+
+async function navigateFullscreen(index) {
+    if (index < 0) return;
+    if (index >= pokemon.length) {
+        await loadMorePokemon();
+        if (index >= pokemon.length) return;
+    }
+    openPokemonOverlay(pokemon[index].id);
+}
+
+

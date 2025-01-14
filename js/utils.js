@@ -27,7 +27,7 @@ function manageUIOnLoad() {
 }
 
 
-function sortPokemonArray() {
+function sortPokemonArray(comparePokemonById) {
     pokemon.sort(comparePokemonById);
 }
 

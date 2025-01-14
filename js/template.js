@@ -25,9 +25,7 @@ function createHtmlPokemonInfoCard(pokemonData) {
 
 function createHtmlPokemonInfoOverlay(pokemonData, index) {
     let { type1, type2 } = getPokemonTypeNames(pokemonData);
-    const hp = pokemonData.stats.find(stat => stat.stat.name === "hp").base_stat;
-    const attack = pokemonData.stats.find(stat => stat.stat.name === "attack").base_stat;
-    const defense = pokemonData.stats.find(stat => stat.stat.name === "defense").base_stat;
+    let { hp, attack, defense } = getPokemonStats(pokemonData);
     return `
     <div class="outside-overlay-container">
         <div class="inside-overlay-container" onclick="event.stopPropagation()">

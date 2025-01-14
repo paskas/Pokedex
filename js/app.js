@@ -101,3 +101,11 @@ function renderFilteredPokemon(filteredPokemon) {
     infoCard.innerHTML += cardContent;
 }
 
+
+function getPokemonStats(pokemonData) {
+    const hp = pokemonData.stats.find(stat => stat.stat.name === "hp").base_stat;
+    const attack = pokemonData.stats.find(stat => stat.stat.name === "attack").base_stat;
+    const defense = pokemonData.stats.find(stat => stat.stat.name === "defense").base_stat;
+    return { hp, attack, defense };
+}
+

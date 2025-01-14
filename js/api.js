@@ -31,10 +31,10 @@ async function pushPokemonToArray(pokemonList) {
 function pokemonAlreadyExists(pokemonId) {
     for (let j = 0; j < pokemon.length; j++) {
         if (pokemon[j].id === pokemonId) {
-            return true; 
+            return true;
         }
     }
-    return false; 
+    return false;
 }
 
 
@@ -65,7 +65,7 @@ async function loadMorePokemon() {
 async function loadAllPokemon() {
     manageUIOnLoad();
     const promises = createFetchPromises();
-    await Promise.all(promises); 
+    await Promise.all(promises);
     extractPokemonTypes();
     renderPokemonInfoCard();
     hideLoadingSpinner();
@@ -76,13 +76,13 @@ function createFetchPromises() {
     let promises = [];
     let totalLoaded = 0;
     for (let i = 0; i < allPokemon; i += quantityPerLoad) {
-        let remainingPokemon = allPokemon - totalLoaded; 
-        let limit = remainingPokemon < quantityPerLoad ? remainingPokemon : quantityPerLoad; 
+        let remainingPokemon = allPokemon - totalLoaded;
+        let limit = remainingPokemon < quantityPerLoad ? remainingPokemon : quantityPerLoad;
         let promise = fetchPokemon(`pokemon?limit=${limit}&offset=${i}`);
         promises.push(promise);
         totalLoaded += limit;
     }
-    return promises; 
+    return promises;
 }
 
 

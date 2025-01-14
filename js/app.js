@@ -10,7 +10,7 @@ async function init() {
     showLoadingSpinner();
     await fetchPokemon();
     extractPokemonTypes();
-    prepareAllPokemonNames(); 
+    prepareAllPokemonNames();
     renderPokemonInfoCard();
     hideLoadingSpinner();
 }
@@ -45,9 +45,9 @@ function getPokemonTypeNames(pokemon) {
 
 function openPokemonOverlay(pokemonId) {
     const pokemonData = pokemon.find(p => p.id === pokemonId);
-    const index = pokemon.findIndex(p => p.id === pokemonId); 
+    const index = pokemon.findIndex(p => p.id === pokemonId);
     const overlayContainer = document.getElementById('pokemon_info_overlay');
-    if (!pokemonData) return; 
+    if (!pokemonData) return;
     overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData, index);
     overlayContainer.classList.remove('d-none');
     document.body.style.overflow = 'hidden';
@@ -66,16 +66,15 @@ function closeOverlay(event) {
 function searchPokemon(inputEvent) {
     const query = inputEvent.target.value.toLowerCase().trim();
     const minLength = 3;
-
     if (query.length >= minLength) {
         const filteredPokemon = pokemon.filter(p => p.name.toLowerCase().includes(query));
         renderFilteredPokemon(filteredPokemon);
-        hideMinLengthWarning(); 
+        hideMinLengthWarning();
     } else if (query.length === 0) {
         renderPokemonInfoCard();
         hideMinLengthWarning();
     } else {
-        showMinLengthWarning(); 
+        showMinLengthWarning();
     }
 }
 
@@ -88,7 +87,7 @@ function showMinLengthWarning() {
 
 function hideMinLengthWarning() {
     const warningMessage = document.getElementById("warning-message");
-    warningMessage.style.display = "none"; 
+    warningMessage.style.display = "none";
 }
 
 

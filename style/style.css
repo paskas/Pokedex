@@ -5,9 +5,16 @@
     padding: 0;
 }
 
-body {
+main {
+    flex: 1;
+}
+
+html, body {
     background-image: url(../assets/img/body_bg.png);
     background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* header */
@@ -37,7 +44,7 @@ header {
 }
 
 .search-form {
-    width: 288px;
+    width: 280px;
     display: flex;
     align-items: center;
 }

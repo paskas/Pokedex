@@ -74,14 +74,14 @@
 }
 
 .dialog-image img {
-    width: 50%;
+    width: 80%;
     height: auto;
 }
 
 .dialog-info {
     position: absolute;
     left: 24px;
-    bottom: 48px;
+    bottom: 24px;
     height: auto;
 }
 
@@ -94,7 +94,7 @@
     padding-right: 16px;
 }
 
-.dialog-type{
+.dialog-type {
     display: flex;
     gap: 16px;
     align-items: center;
@@ -133,9 +133,10 @@
     justify-content: space-evenly;
 }
 
-.dialog-poke-stats-container th, .dialog-poke-stats-container td {
+.dialog-poke-stats-container th,
+.dialog-poke-stats-container td {
     width: 100%;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 
@@ -159,27 +160,28 @@
     cursor: pointer;
 }
 
-.dialog-next-arrows{
-
-}
-
-.nav-arrow{
+.nav-arrow {
     background: none;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
+    transition: transform 300ms;
 }
 
-.nav-arrow.left{
+.nav-arrow img:hover {
+    transform: scale(1.06);
+}
+
+.nav-arrow.left {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.nav-arrow.right{
+.nav-arrow.right {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -187,29 +189,34 @@
 }
 
 @media (max-width: 1261px) {
-    .outside-overlay-container{
+    .outside-overlay-container {
         max-width: 60vw;
         width: 100%;
     }
 }
 
-@media (max-width: 1025px){
-    .outside-overlay-container{
+@media (max-width: 1025px) {
+    .outside-overlay-container {
         max-width: 70vw;
         width: 100%;
     }
 }
 
-@media (max-width: 721px){
-    .outside-overlay-container{
+@media (max-width: 721px) {
+    .outside-overlay-container {
         max-width: 80vw;
         width: 100%;
     }
 }
 
-@media (max-width: 481px){
-    .outside-overlay-container{
+@media (max-width: 481px) {
+    .outside-overlay-container {
         max-width: 90vw;
         width: 100%;
+    }
+
+    .dialog-image img {
+        width: 100%;
+        height: auto;
     }
 }

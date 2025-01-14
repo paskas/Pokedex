@@ -20,18 +20,13 @@
 .search-form-button {
     height: 32px;
     width: 32px;
-    cursor: pointer;
     border-width: 0;
     border-radius: 0 4px 4px 0;
     background-image: url(../assets/img/pokeball_gray.png);
     background-position: 5px center;
     background-size: 24px;
     background-repeat: no-repeat;
-}
-
-.search-form-button:hover {
-    background-size: 28px;
-    background-position: center;
+    background-color: white;
 }
 
 /* load more Pokemon button */

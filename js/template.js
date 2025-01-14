@@ -50,7 +50,7 @@ function createHtmlPokemonInfoOverlay(pokemonData, index) {
             </div>
         </div>
         <div class="bottom-inside-overlay">
-            <div class="dialog-poke-stats-container">
+            <div class="dialog-poke-stats-container c-white">
                 <div class="dialog-pokeinfo">
                     <table>
                         <tr>
@@ -86,8 +86,8 @@ function createHtmlPokemonInfoOverlay(pokemonData, index) {
             </div>
             <div class="dialog-evo-container"></div>
             <div class="dialog-next-arrows">
-                <button class="nav-arrow left" onclick="navigateFullscreen(${index - 1})">&#9664;</button>
-                <button class="nav-arrow right" onclick="navigateFullscreen(${index + 1})">&#9654;</button>
+                <button class="nav-arrow left" onclick="navigateFullscreen(${index - 1})"><img src="./assets/img/arrow_left.png" alt=""></button>
+                <button class="nav-arrow right" onclick="navigateFullscreen(${index + 1})"><img src="./assets/img/arrow_right.png" alt=""></button>
             </div>
         </div>
         <button class="close-overlay-btn" onclick="closeOverlay(event)">X</button>

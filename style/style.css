@@ -12,6 +12,9 @@ body {
 
 /* header */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 88;
     background-color: rgb(47, 47, 47)
 }
 
@@ -43,7 +46,7 @@ header {
     color: red;
     font-size: 12px;
     position: absolute;
-    top: 70px;
+    top: 10px;
     display: none;
 }
 
@@ -70,11 +73,17 @@ footer {
     align-items: center;
 }
 
+.footer-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .header {
         height: fit-content;
         flex-direction: column;
-        height: 120px;
+        height: 150px;
     }
 
     .header-left {
@@ -91,6 +100,6 @@ footer {
     }
 
     .warning-message {
-        top: 130px;
+        top: 85px;
     }
 }

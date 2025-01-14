@@ -104,8 +104,6 @@
     margin: auto;
 }
 
-
-
 @media (max-width: 375px) {
     .pokemon-card-outside {
         margin: 0 16px;

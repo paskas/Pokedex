@@ -7,7 +7,7 @@ function createHtmlPokemonInfoCard(pokemonData) {
                 <h2>${insertLineBreaks(capitalizeFirstLetter(pokemonData.name))}</h2>
             </div>
             <img src="${pokemonData.sprites.other['official-artwork'].front_default}" alt="${pokemonData.name}"
-                    class="card-img" onclick="openPokemonOverlay(${pokemonData.id})">
+                class="card-img" onclick="openPokemonOverlay(${pokemonData.id})">
             <div class="card-infos">
                 <div class="card-id"><span>Nr. ${pokemonData.id.toString().padStart(4, '0')}</span></div>
                 <hr>
@@ -32,7 +32,7 @@ function createHtmlPokemonInfoOverlay(pokemonData, index) {
     <div class="outside-overlay-container">
         <div class="inside-overlay-container" onclick="event.stopPropagation()">
             <div class="top-inside-overlay bg-${type1}"">
-                    <div class=" top-inside">
+                        <div class=" top-inside">
                 <div class="dialog-title-container">
                     <h2 class="c-white">${insertLineBreaks(capitalizeFirstLetter(pokemonData.name))}</h2>
                     <span class="c-white">Nr. ${pokemonData.id}</span>
@@ -86,8 +86,10 @@ function createHtmlPokemonInfoOverlay(pokemonData, index) {
             </div>
             <div class="dialog-evo-container"></div>
             <div class="dialog-next-arrows">
-                <button class="nav-arrow left" onclick="navigateFullscreen(${index - 1})"><img src="./assets/img/arrow_left.png" alt=""></button>
-                <button class="nav-arrow right" onclick="navigateFullscreen(${index + 1})"><img src="./assets/img/arrow_right.png" alt=""></button>
+                <button class="nav-arrow left" onclick="navigateFullscreen(${index - 1})"><img
+                        src="./assets/img/arrow_left.png" alt=""></button>
+                <button class="nav-arrow right" onclick="navigateFullscreen(${index + 1})"><img
+                        src="./assets/img/arrow_right.png" alt=""></button>
             </div>
         </div>
         <button class="close-overlay-btn" onclick="closeOverlay(event)">X</button>

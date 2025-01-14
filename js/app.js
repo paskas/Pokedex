@@ -10,7 +10,7 @@ async function init() {
     showLoadingSpinner();
     await fetchPokemon();
     extractPokemonTypes();
-    prepareAllPokemonNames(); // Alle Namen vorbereiten
+    prepareAllPokemonNames(); 
     renderPokemonInfoCard();
     hideLoadingSpinner();
 }
@@ -44,10 +44,10 @@ function getPokemonTypeNames(pokemon) {
 
 
 function openPokemonOverlay(pokemonId) {
-    const pokemonData = pokemon.find(p => p.id === pokemonId); // Finde das aktuelle Pokémon
-    const index = pokemon.findIndex(p => p.id === pokemonId); // Finde den Index des aktuellen Pokémon
+    const pokemonData = pokemon.find(p => p.id === pokemonId);
+    const index = pokemon.findIndex(p => p.id === pokemonId); 
     const overlayContainer = document.getElementById('pokemon_info_overlay');
-    if (!pokemonData) return; // Falls kein Pokémon gefunden wird, abbrechen
+    if (!pokemonData) return; 
     overlayContainer.innerHTML = createHtmlPokemonInfoOverlay(pokemonData, index);
     overlayContainer.classList.remove('d-none');
     document.body.style.overflow = 'hidden';
@@ -64,31 +64,31 @@ function closeOverlay(event) {
 
 
 function searchPokemon(inputEvent) {
-    const query = inputEvent.target.value.toLowerCase().trim(); // Normalisiere die Eingabe
+    const query = inputEvent.target.value.toLowerCase().trim();
     const minLength = 3;
 
     if (query.length >= minLength) {
         const filteredPokemon = pokemon.filter(p => p.name.toLowerCase().includes(query));
         renderFilteredPokemon(filteredPokemon);
-        hideMinLengthWarning(); // Warnung ausblenden, wenn 3 oder mehr Buchstaben eingegeben wurden
+        hideMinLengthWarning(); 
     } else if (query.length === 0) {
-        renderPokemonInfoCard(); // Zeige alle Pokémon, wenn das Feld leer ist
+        renderPokemonInfoCard();
         hideMinLengthWarning();
     } else {
-        showMinLengthWarning(); // Zeige Warnung, wenn weniger als 3 Buchstaben eingegeben wurden
+        showMinLengthWarning(); 
     }
 }
 
 
 function showMinLengthWarning() {
     const warningMessage = document.getElementById("warning-message");
-    warningMessage.style.display = "block"; // Zeige die Warnung an
+    warningMessage.style.display = "block";
 }
 
 
 function hideMinLengthWarning() {
     const warningMessage = document.getElementById("warning-message");
-    warningMessage.style.display = "none"; // Verstecke die Warnung
+    warningMessage.style.display = "none"; 
 }
 
 

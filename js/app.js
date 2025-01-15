@@ -72,7 +72,7 @@ function searchPokemon(inputEvent) {
         hideMinLengthWarning();
     } else if (query.length === 0) {
         renderPokemonInfoCard();
-        hideMinLengthWarning();
+        hideMinLengthWarning()
     } else {
         showMinLengthWarning();
     }
